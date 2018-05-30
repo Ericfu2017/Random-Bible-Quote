@@ -11,6 +11,6 @@ $(document).ready(function(){
     $body.append('<script src="http://www.ourmanna.com/verses/api/js/?order=random" type="text/javascript"></script>');
 
     $('#next').click(function(){
-        location.reload();
+        $body.append('<script src="http://www.ourmanna.com/verses/api/js/?order=random" type="text/javascript"></script>');
     })
 })
