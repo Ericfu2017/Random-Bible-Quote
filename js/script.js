@@ -11,7 +11,7 @@ $(document).ready(function(){
     $body.append('<script src="http://www.ourmanna.com/verses/api/js/?order=random" type="text/javascript"></script>');
     //quote = $('#mannaverse').text(); //try to extract quote text from the <p> tag
     //console.log(quote);
-    $('#share').hide();
+    //$('#share').hide();
     $('#next').click(function(event){
         event.preventDefault();
         $body.append('<script src="http://www.ourmanna.com/verses/api/js/?order=random" type="text/javascript"></script>');
