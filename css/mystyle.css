@@ -1,5 +1,5 @@
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif';
+    font-family: "Comic Sans MS", cursive, sans-serif; /*'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
 }
 
 
@@ -36,7 +36,7 @@ body {
     left: 0;
     width: 100%;
     z-index: -1;
-    opacity: 1
+    opacity: 1;
 }
 
 i {

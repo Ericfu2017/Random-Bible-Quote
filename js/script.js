@@ -1,22 +1,25 @@
 $(document).ready(function(){
-    $("<link/>", {
+   /* $("<link/>", {
         rel: "stylesheet",
         type: "text/css",
         href: "css/mystyle.css"
-    }).appendTo("head");
+    }).appendTo("head"); 
+    */
 
     var $body = $('body');
-    var backgroundImg = "/img/water.jpg";
+    var backgroundImg = "https://images.unsplash.com/photo-1492895036205-f803195fba76?ixlib=rb-  0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b777119344e02d5404869424d03b71e8&auto=format&fit=crop&w=800&q=60";
     $body.append('<img class="background-img" src="' + backgroundImg + '"/>');
-    $body.append('<script src="http://www.ourmanna.com/verses/api/js/?order=random" type="text/javascript"></script>');
+    //$body.append('<script src="http://www.ourmanna.com/verses/api/js/?order=random" type="text/javascript"></script>');
     //quote = $('#mannaverse').text(); //try to extract quote text from the <p> tag
     //console.log(quote);
     //$('#share').hide();
+    getQuote();
     updatePrice();
 
     $('#next').click(function(event){
         event.preventDefault();
-        $body.append('<script src="http://www.ourmanna.com/verses/api/js/?order=random" type="text/javascript"></script>');
+       // $body.append('<script src="http://www.ourmanna.com/verses/api/js/?order=random" type="text/javascript"></script>');
+        getQuote();
         updatePrice();
     });
     // try to fix the tweet quote functionality
@@ -41,6 +44,12 @@ $(document).ready(function(){
         $('#ltc').html("Litecoin: $" + data.USD);
     })
         $('#abtc').html("AML Bitcoin: coming soon ...")
+    }
+
+    function getQuote() {
+        $.getScript("https://beta.ourmanna.com/api/v1/js/?order=random", function(){
+
+        });
     }
     
 
