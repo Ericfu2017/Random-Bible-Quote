@@ -1,1 +1,3 @@
 # Random-Bible-Quote
+Daily Random Bible Quote with tweet functionality, use Ajax and Jason to get the latest cryptocurrency price on Bitcoin, Ethereum & Litcoin, Aml Bitcoin's price is coming...
+thanks cryptocompare.com providing the latest live price data :-)
