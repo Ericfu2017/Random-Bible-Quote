@@ -85,3 +85,7 @@ ul li {
     width: 50rem;
     margin: 5rem auto;
 }
+
+cite {
+    font-size: 13px;
+}

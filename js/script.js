@@ -20,7 +20,7 @@ $(document).ready(function(){
         event.preventDefault();
         //$body.append('<script src="http://www.ourmanna.com/verses/api/js/?order=random" type="text/javascript"></script>');
        getQuote();
-        updatePrice();
+       updatePrice();
     });
 
     $('#share').on('click', function(event){
