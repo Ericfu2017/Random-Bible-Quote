@@ -18,7 +18,7 @@ $(document).ready(function(){
             "author": "Wenkui Fu"
         },
         {
-            "quotes": "I have to work 16 hours today and tomorrow T_T",
+            "quotes": "I have to work 16 hours today and tomorrow T_T :-) :-)",
             "author": "Yu Fu"
         },
         {
