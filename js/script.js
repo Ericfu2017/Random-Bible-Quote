@@ -28,6 +28,10 @@ $(document).ready(function(){
         {
             "quotes": "You and I will follow blueberry cheesecake! :-)",
             "author": "Weed Jeremy"
+        },
+        {
+            "quotes": "Focus on now, not yesterday not tommorow and believe you can achieve your goals with all your heart! ^_^",
+            "author": "Yu Fu"
         }
     ]
 
