@@ -6,6 +6,26 @@ $(document).ready(function(){
     }).appendTo("head"); */
     var myQuotes = [
         {
+            "quotes": "I follow blueberry cheesecake now! :-)",
+            "author": "Wenkui Fu"
+        },
+        {
+            "quotes": "I think there are things that are clearly right and clearly wrong in the world just like there are people who serve others and people who abuse or use ohters to serve themselves and God's Love goes out to ALL ALIKE",
+            "author": "Weed Jeremy"
+        },
+        {
+            "quotes": "Anyway, politics are so dirty! I Quit!",
+            "author": "Wenkui Fu"
+        },
+        {
+            "quotes": "I have to work 16 hours today and tomorrow T_T",
+            "author": "Yu Fu"
+        },
+        {
+            "quotes": "What a fucked up system. A prisoner can get all medical treatments including CABG, HIV and Hep C treatments free but we hav to pay for it. It is Fucked Up!",
+            "author": "Yu Fu"
+        },
+        {
             "quotes": "You and I will follow blueberry cheesecake! :-)",
             "author": "Weed Jeremy"
         }
@@ -50,7 +70,7 @@ $(document).ready(function(){
     }
 
     function getQuote() {
-        var choice = Math.floor(Math.random() * 20);
+        var choice = Math.floor(Math.random() * 10);
         if (choice == 0) {
             getMyQuotes();
         } else {
