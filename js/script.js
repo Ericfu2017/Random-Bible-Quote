@@ -35,7 +35,9 @@ $(document).ready(function(){
         }
     ]
 
-    
+    var btcPrice = 0;
+    var ethPrice = 0;
+    var ltcPrice = 0;
     var $body = $('body');
     var backgroundImg = "https://images.unsplash.com/photo-1492895036205-f803195fba76?ixlib=rb-  0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b777119344e02d5404869424d03b71e8&auto=format&fit=crop&w=800&q=60";
     $body.append('<img class="background-img" src="' + backgroundImg + '"/>');
@@ -43,7 +45,9 @@ $(document).ready(function(){
     
     getQuote();
     updatePrice();
-    
+
+
+
     $('#next').click(function(event){
        event.preventDefault();
        getQuote();
@@ -61,20 +65,44 @@ $(document).ready(function(){
     function updatePrice() {
         
         $.getJSON("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD", function(data){
-        $('#btc').html("Bitcoin: $" + data.USD);
+        if (btcPrice !== data.USD) {
+            if (btcPrice < data.USD) {
+                $('#btc').html("Bitcoin: " + '<span style="color:green">$' + data.USD + '</span>'); 
+                btcPrice = data.USD;
+            } else {
+                $('#btc').html("Bitcoin: " + '<span style="color:red">$' + data.USD + '</span>');
+                btcPrice = data.USD;
+            }
+        }
     });
         $.getJSON("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD", function(data){
-        $('#eth').html("Ethereum: $" + data.USD);
+        if (ethPrice !== data.USD) {
+            if (ethPrice < data.USD) {
+                $('#eth').html("Ethereum: " + '<span style="color:green">$' + data.USD + '</span>'); 
+                ethPrice = data.USD;
+            } else {
+                $('#eth').html("Ethereum: " + '<span style="color:red">$' + data.USD + '</span>'); 
+                ethPrice = data.USD;
+            }
+        }
     });
         $.getJSON("https://min-api.cryptocompare.com/data/price?fsym=LTC&tsyms=USD", function(data){
-        $('#ltc').html("Litecoin: $" + data.USD);
+        if (ltcPrice !== data.USD) {
+            if (ltcPrice < data.USD) {
+                $('#ltc').html("Litecoin: " + '<span style="color:green">$' + data.USD + '</span>'); 
+                ltcPrice = data.USD;
+            } else {
+                $('#ltc').html("Litecoin: " + '<span style="color:red">$' + data.USD + '</span>'); 
+                ltcPrice = data.USD;
+            }
+        }
     })
         $('#abtc').html("AML Bitcoin: coming soon ...");
         $('#currency-container');
     }
 
     function getQuote() {
-        var choice = Math.floor(Math.random() * 10);
+        var choice = Math.floor(Math.random() * 2);
         if (choice == 0) {
             getMyQuotes();
         } else {
@@ -94,6 +122,7 @@ $(document).ready(function(){
         var length = myQuotes.length;
         var randomNumber = Math.floor(Math.random() * length);
         $('#ourmanna-verse').html('<div id="mannaverse-container"><p id="mannaverse">' + myQuotes[randomNumber].quotes + '</p> <p id="mannaverse-reference">' + myQuotes[randomNumber].author + '</p></div>' ).slideUp(2000).slideDown(2000);
+        setTimeout(function(){ $('#mannaverse-reference').addClass("animated shake")}, 4000);
         quotes = myQuotes[randomNumber].quotes;
         chapter = myQuotes[randomNumber].author;
     }
